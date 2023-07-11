@@ -1,0 +1,6 @@
+ON : Push
+jobs :
+     first-job:
+          runs-on: ubantu-latest
+          steps :
+               - run : nodde -- version
