@@ -1,8 +1,17 @@
-name: Hello World
-on: [push]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Say Hello
-        run: echo "Hello, World!"
+on: push
+jobs: 
+    print-version:
+        runs-on: ubantu-latest
+        steps: 
+          - name : install node index.js
+            uses : action/@setup -node@v2
+            with :
+              node-version : '14.x'
+          - name : print-version
+            run : node-v
+
+
+
+
+     
+  
